@@ -11,6 +11,7 @@
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-sass-bulk-import": "latest",
+	"gulp-sourcemaps": "latest",
     "gulp-uglify": "latest",
     "pump": "latest"
   },
