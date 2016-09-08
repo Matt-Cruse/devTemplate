@@ -1,7 +1,7 @@
 {
   "name": "dev-package",
   "version": "1.0.0",
-  "description": "Gulp (dependancies) and Bootstrap SASS",
+  "description": "Gulp (dependancies)",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {    

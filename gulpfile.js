@@ -43,7 +43,9 @@ gulp.task('jsdist', function() {
 	.pipe(gulp.dest('dist/js'));
 });
 
-/*PROXY E.G. localhost/fish-dev/opportunity-nottingham/website/build_v2/*/	
+/*STATIC, uncomment "server"*/
+/*BROWSER, choose which browsers to open on watch, opens default browser initially*/
+/*DYNAMIC, use proxy E.G. localhost/...*/	
 
 gulp.task('browserSync', function() {
 	browserSync.init({
