@@ -1,3 +1,5 @@
 # devTemplate
 
-Basic template files including bootstrap sass and gulpfile
+Basic template files for build
+
+BOOTSTRAP-SASS is installed externally and would need the reference changing in gulpfile.js
