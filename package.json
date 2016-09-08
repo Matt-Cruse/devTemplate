@@ -4,8 +4,7 @@
   "description": "Gulp (dependancies) and Bootstrap SASS",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {
-    "bootstrap-sass": "latest",
+  "devDependencies": {    
     "browser-sync": "latest",
     "gulp": "latest",
     "gulp-rename": "latest",
