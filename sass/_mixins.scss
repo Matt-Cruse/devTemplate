@@ -1,0 +1,351 @@
+@mixin Tablet($Orientation: "both") 
+{
+    @if($Orientation == "both") {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1279px) {
+            @content;
+        }
+    }
+    @else if($Orientation == "landscape") {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1279px) and (orientation : landscape) {
+            @content;
+        }
+    }
+    @else if($Orientation == "portrait") {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1279px) and (orientation : portrait) {
+            @content;
+        }
+    }
+}
+
+@mixin Smartphone($Orientation: "both") 
+{
+    @if($Orientation == "both") {
+        @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
+            @content;
+        }
+    }
+    @else if($Orientation == "landscape") {
+        @media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation : landscape) {
+            @content;
+        }
+    }
+    @else if($Orientation == "portrait") {
+        @media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation : portrait) {
+            @content;
+        }
+    }
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+@mixin iPhone44s($Orientation: "both")
+{
+	@if($Orientation == "both"){
+		@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)
+		{
+			@content;
+		}
+	}
+	@else if($Orientation == "landscape") 
+	{
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+		{
+            @content;
+        }
+    }
+    @else if($Orientation == "portrait") 
+	{
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+		{
+            @content;
+        }
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+@mixin iPhone55s($Orientation: "both")
+{
+	@if($Orientation == "both"){
+		@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2)
+		{
+			@content;
+		}
+	}
+	@else if($Orientation == "landscape") 
+	{
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+		{
+            @content;
+        }
+    }
+    @else if($Orientation == "portrait") 
+	{
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+		{
+            @content;
+        }
+    }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+@mixin iPhone6($Orientation: "both")
+{
+	@if($Orientation == "both"){
+		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2)
+		{
+			@content;
+		}
+	}
+	@else if($Orientation == "landscape") 
+	{
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+		{
+            @content;
+        }
+    }
+    @else if($Orientation == "portrait") 
+	{
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+		{
+            @content;
+        }
+    }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+@mixin iPhone6p($Orientation: "both")
+{
+	@if($Orientation == "both"){
+		@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3)
+		{
+			@content;
+		}
+	}
+	@else if($Orientation == "landscape") 
+	{
+        @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+		{
+            @content;
+        }
+    }
+    @else if($Orientation == "portrait") 
+	{
+        @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+		{
+            @content;
+        }
+    }
+}
+
+@mixin Device($maxWidth) 
+{
+    @media only screen and (max-width : $maxWidth) {
+        @content;
+    }
+}
+
+@mixin fontStyle($z: $baseFont,$a: $baseFontSize,$b: $baseFontWeight,$c: $baseFontCol,$d: $line-height-base) 
+{
+    font: {
+        family: $z;
+        size: $a;
+        weight: $b;
+    }
+
+    line-height: $d;
+    color: $c;
+}
+
+@mixin linkStyle($a: $baseFontCol,$b: underline,$c: $baseFontCol,$d: none) 
+{
+    &:link, &:visited {
+        color: $a;
+        text-decoration: $b;
+    }
+
+    &:hover {
+        color: $c;
+        text-decoration: $d;
+    }
+}
+
+@mixin buttonStyle($a: $grey,$b: $white,$c: $white,$d: $white,$e: $grey,$f: $grey) 
+{
+    float: left;
+    margin: 1em 0 0;
+    padding: 1em 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: $a;
+    border: 1px solid $b;
+
+    text: {
+        align: center;
+        decoration: none;
+    }
+
+    @include fontStyle($baseFont,1em,700,$c,100%);
+
+    &:hover {
+        background-color: $d;
+        border: 1px solid $e;
+        color: $f;
+    }
+
+    /*@include Smartphone() {
+        width: 100%;
+        padding: 1em 0;
+    }*/
+}
+
+@mixin clearfix 
+{
+    -ms-zoom: 1;
+    zoom: 1;
+
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin verticalAlign($position:relative)
+{
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin boxSizing()
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin linkArrow()
+{
+	&:after
+	{
+		content: "";
+		width: 11px;
+		height: 20px;
+		position: relative;
+		background:
+		{
+			image: url("../images/elements/arrow-small.png");
+			position: center center;
+			repeat: no-repeat;
+		}
+		display: inline-block;
+		padding-left: 1.5em;
+		-webkit-transform: translateY(12.5%);
+		-moz-transform: translateY(12.5%);
+		transform: translateY(12.5%);
+		transition: transform 0.5s ease;
+	}
+	&:hover
+	{
+		&:after
+		{
+			transform: translateY(12.5%) translateX(0.5em);					
+		}
+	}	
+}
+
+@mixin contactHeadFoot()
+{
+	span
+	{
+		width: 100%;
+		float: left;
+		position: relative;
+		padding: 0 0 0 40px;
+		@include boxSizing;
+		clear: left;
+		@media (max-width: $screen-sm)
+		{
+			width: auto;
+			float: none;
+		}
+		&:before
+		{
+			position: absolute;
+			left: 0;
+		}
+		&.tel
+		{
+			@include fontStyle($baseFont,23px,400,$black);	
+			&:before
+			{
+				content: url($iconPath + "/tel-icon.png");
+				top: -5px;
+			}
+			&.desktop
+			{							
+				@media (max-width: $screen-sm)
+				{
+					display: none;
+				}
+			}
+			&.mobile
+			{
+				display: none;					
+				&:after
+				{
+					content: "0800 055 6191 (freephone) 0115 850 4128";
+					@media (max-width: $screen-sm)
+					{
+						content: "Call us";	
+					}
+				}					
+				@media (max-width: $screen-sm)
+				{
+					display: block;
+				}
+			}
+		}
+		&.email
+		{
+			@include fontStyle($baseFont,0.90em,600,$black);
+			line-height: 28px;
+			@media (max-width: $screen-sm)
+			{
+				@include fontStyle($baseFont,21px,600,$black);			
+			}
+			&:before
+			{
+				content: url($iconPath + "/email-icon.png");
+				bottom: -5px;
+			}
+			& a
+			{
+				&:after
+				{
+					content: "enquiries@opportunitynottingham.co.uk";
+					@media (max-width: $screen-sm)
+					{
+						content: "Email us";
+						font-weight: 400;	
+					}
+				}
+			}
+		}
+		& a
+		{
+			@include linkStyle($black,none,$midGrey,none);
+		}
+	}		
+}

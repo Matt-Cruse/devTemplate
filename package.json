@@ -1,0 +1,30 @@
+{
+  "name": "dev-package",
+  "version": "1.0.0",
+  "description": "Gulp (dependancies) and Bootstrap SASS",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "latest",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sass-bulk-import": "latest",
+    "gulp-uglify": "latest",
+    "pump": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Cruse",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Matt-Cruse/devTemplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Matt-Cruse/devTemplate/issues"
+  },
+  "homepage": "https://github.com/Matt-Cruse/devTemplate"
+}

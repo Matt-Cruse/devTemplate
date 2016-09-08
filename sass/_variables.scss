@@ -1,0 +1,45 @@
+//CUSTOM FONTS
+
+$customFont: 'Open Sans', sans-serif;
+$dashIcon: 'dashicons';
+$awesFont: 'font-awesome';
+$glyphIcon: 'glyph-icons';
+
+//BASE COLOURS
+
+$black: rgb(0,0,0);
+$midBlack: rgb(36,32,33);
+$grey: rgb(51,51,51);
+$darkGrey: rgb(142,142,142);
+$midGrey: rgb(212,212,212);
+$lightGrey: rgb(233,233,233);
+$white: rgb(255,255,255);
+
+$brandYellow: #ffdd00;
+$paleYellow: rgb(255,240,136);
+
+$purple: rgb(90,40,127);
+$orange: rgb(255,102,0);
+$green: rgb(0,255,0);
+$blue: rgb(0,0,255);
+$red: rgb(255,0,0);
+$yellow: rgb(255,255,0);
+
+//BASE PATHS
+
+$baseFont: $customFont;
+$baseFontCol: $midBlack;
+$baseFontSize: 16px;
+$baseFontWeight: 400;
+$baseLineHeight: 1.5em;
+
+$relativePath: "../";
+
+$bgroundPath: $relativePath + "images/bgrounds";
+$iconPath: $relativePath + "images/icons";
+$logoPath: $relativePath + "images/logos";
+$elementPath: $relativePath + "images/elements";
+$bannerPath: $relativePath + "images/banners";
+$hotspotPath: $relativePath + "images/hotspots";
+$gifPath: $relativePath + "images/gifs";
+$fontsPath: $relativePath + "fonts";
