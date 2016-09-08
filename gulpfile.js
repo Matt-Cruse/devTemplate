@@ -8,7 +8,8 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps');
 	
 var config = {
-    bootstrapDir: './node_modules/bootstrap-sass',
+    /*bootstrapDir: './node_modules/bootstrap-sass',*/
+	bootstrapDir: 'D:/Dropbox/working files/fish-dev.net/node_modules/bootstrap-sass',
     publicDir: './dist'
 };
 	
